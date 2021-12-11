@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <item
+        android:id="@+id/updatePass"
+        android:title="Change Password"
+        app:showAsAction="never"
+        android:icon="@drawable/find_people_icon">
+    </item>
+
+    <item
+        android:id="@+id/logout"
+        android:title="logout"
+        app:showAsAction="never"
+        android:icon="@drawable/find_people_icon">
+    </item>
+
+
+
+</menu>

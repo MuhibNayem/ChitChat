@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/WhiteColor"
+    tools:context=".Activities.RegisterActivity"
+    android:padding="20dp">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/signUp_title_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/aladin"
+                android:text="Create\nAccount"
+                android:textAllCaps="true"
+                android:textColor="#090909"
+                android:textColorHint="#050505"
+                android:textSize="50dp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/regiUserlogo"
+                android:layout_width="match_parent"
+                android:layout_height="104dp"
+                android:layout_below="@id/signUp_title_text"
+                android:padding="20dp"
+                android:src="@drawable/user" />
+
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/regi_email"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/regiUserlogo"
+                android:hint="Email"
+                app:boxStrokeColor="#070707"
+                app:boxStrokeWidthFocused="2dp"
+                app:endIconMode="clear_text"
+                app:endIconTint="#070707"
+                app:hintTextColor="#070707"
+                app:startIconDrawable="@drawable/email_icon"
+                app:startIconTint="#070707">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/aladin"
+                    android:inputType="textEmailAddress"
+                    android:textColor="#070707"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/regi_pass"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/regi_email"
+                android:hint="Password"
+                app:boxStrokeColor="#070707"
+                app:boxStrokeWidthFocused="2dp"
+                app:endIconMode="password_toggle"
+                app:endIconTint="#070707"
+                app:hintTextColor="#070707"
+                app:startIconDrawable="@drawable/password"
+                app:startIconTint="#070707">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/aladin"
+                    android:inputType="textPassword"
+                    android:textColor="#070707"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/regiCom_pass"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/regi_pass"
+                android:hint="Confirm Password"
+                app:boxStrokeColor="#070707"
+                app:boxStrokeWidthFocused="2dp"
+                app:endIconMode="password_toggle"
+                app:endIconTint="#070707"
+                app:hintTextColor="#070707"
+                app:startIconDrawable="@drawable/password"
+                app:startIconTint="#070707">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/aladin"
+                    android:inputType="textPassword"
+                    android:textColor="#070707"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/registration_btn"
+                android:layout_width="183dp"
+                android:layout_height="58dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/custom_button"
+                android:elevation="5dp"
+                android:onClick="callHomeRage"
+                android:padding="20dp"
+                android:text="Register"
+                android:layout_below="@id/regiCom_pass"
+                android:layout_gravity="center"
+                android:textColor="@color/WhiteColor"
+                android:textSize="16sp" />
+
+
+            <Button
+                android:id="@+id/login_btn"
+                android:layout_width="183dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/registration_btn"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/custom_button"
+                android:fontFamily="@font/aladin"
+                android:onClick="BackToLogin"
+                android:padding="20dp"
+                android:text="Login"
+                android:textColor="@color/WhiteColor"
+                android:textSize="18sp"
+                android:textStyle="normal"
+                tools:ignore="OnClick" />
+
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+</RelativeLayout>

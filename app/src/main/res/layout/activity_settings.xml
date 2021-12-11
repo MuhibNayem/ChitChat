@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/WhiteColor"
+
+    tools:context=".Activities.SettingsActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <include
+            android:id="@+id/mainpage_tool_bar"
+            layout="@layout/app_bar_layout">
+
+        </include>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/profile_image"
+                    android:layout_width="300dp"
+                    android:layout_height="300dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="45dp"
+                    android:src="@drawable/profile_image"
+                    app:civ_border_width="5dp" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/regi_fullname"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/profile_image"
+                    android:layout_marginTop="20dp"
+                    android:hint="Fullname"
+                    app:boxStrokeColor="#070707"
+                    app:boxStrokeWidthFocused="2dp"
+                    app:endIconMode="clear_text"
+                    app:endIconTint="#070707"
+                    app:hintTextColor="#070707"
+                    app:startIconDrawable="@drawable/username_icon"
+                    app:startIconTint="#070707">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/regi_fullname_txt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/aladin"
+                        android:inputType="text"
+                        android:textColor="#070707"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/regi_username"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/regi_fullname"
+                    android:hint="Username"
+                    app:boxStrokeColor="#070707"
+                    app:boxStrokeWidthFocused="2dp"
+                    app:endIconMode="clear_text"
+                    app:endIconTint="#070707"
+                    app:hintTextColor="#070707"
+                    app:startIconDrawable="@drawable/user_logo"
+                    app:startIconTint="#070707">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/regi_username_txt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/aladin"
+                        android:inputType="text"
+                        android:textColor="#070707"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/regi_user_phone"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/regi_username"
+                    android:hint="Phone Number"
+                    app:boxStrokeColor="#070707"
+                    app:boxStrokeWidthFocused="2dp"
+                    app:endIconMode="clear_text"
+                    app:endIconTint="#070707"
+                    app:hintTextColor="#070707"
+                    app:startIconDrawable="@drawable/call_black_icon"
+                    app:startIconTint="#070707"
+
+                    >
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/regi_user_phone_txt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/aladin"
+                        android:inputType="phone"
+                        android:textColor="#070707"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/user_birthdate"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/regi_user_phone"
+                    android:hint="Birthdate"
+                    app:boxStrokeColor="#070707"
+                    app:boxStrokeWidthFocused="2dp"
+                    app:endIconMode="clear_text"
+                    app:endIconTint="#070707"
+                    app:hintTextColor="#070707"
+                    app:startIconDrawable="@drawable/calendar_icon"
+                    app:startIconTint="#070707">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/user_birthdate_txt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/aladin"
+                        android:inputType="date"
+                        android:textColor="#070707"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <EditText
+                    android:id="@+id/user_status"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/user_birthdate"
+                    android:layout_marginTop="20dp"
+                    android:backgroundTint="@android:color/background_dark"
+                    android:cursorVisible="true"
+                    android:fontFamily="@font/aladin"
+                    android:hint="I'm available on ChitChat"
+                    android:inputType="textMultiLine"
+                    android:textAlignment="viewStart"
+                    android:textColor="#000000"
+                    android:textCursorDrawable="@color/blackColor"
+                    android:textStyle="normal" />
+
+
+                <Button
+                    android:id="@+id/update_btn"
+                    android:layout_width="183dp"
+                    android:layout_height="58dp"
+                    android:layout_below="@+id/user_status"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/custom_button"
+                    android:elevation="5dp"
+                    android:padding="20dp"
+                    android:text="Update"
+                    android:textColor="@color/WhiteColor"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>
